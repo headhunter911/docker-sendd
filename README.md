@@ -1,12 +1,12 @@
-Dashd for Docker
+**IN DEVELOPMENT**
+
+Sendd for Docker
 ================
 
-[![Docker Stats](http://dockeri.co/image/dashpay/dashd)](https://hub.docker.com/r/dashpay/dashd/)
-
-[![Build Status](https://travis-ci.org/dashpay/docker-dashd.svg?branch=master)](https://travis-ci.org/dashpay/docker-dashd/)
+[![Build Status](https://travis-ci.org/headhunter911/docker-sendd.svg?branch=master)](https://travis-ci.org/headhunter911/docker-sendd/)
 
 
-Docker image that runs the Dash dashd node in a container for easy deployment.
+Docker image that runs the Social Send sendd node in a container for easy deployment.
 
 
 Requirements
@@ -24,19 +24,19 @@ Really Fast Quick Start
 
 One liner for Ubuntu 14.04 LTS machines with JSON-RPC enabled on localhost and adds upstart init script:
 
-    curl https://raw.githubusercontent.com/dashpay/docker-dashd/master/bootstrap-host.sh | sh -s trusty
+   *WILL UPDATE curl https://raw.githubusercontent.com/dashpay/docker-dashd/master/bootstrap-host.sh | sh -s trusty
 
 
 Quick Start
 -----------
 
-1. Create a `dashd-data` volume to persist the dashd blockchain data, should exit immediately.  The `dashd-data` container will store the blockchain when the node container is recreated (software upgrade, reboot, etc):
+1. Create a `sendd-data` volume to persist the sendd blockchain data, should exit immediately.  The `sendd-data` container will store the blockchain when the node container is recreated (software upgrade, reboot, etc):
 
-        docker volume create --name=dashd-data
-        docker run -v dashd-data:/dash --name=dashd-node -d \
+        docker volume create --name=sendd-data
+        docker run -v sendd-data:/dash --name=sendd-node -d \
             -p 9999:9999 \
             -p 127.0.0.1:9998:9998 \
-            dashpay/dashd
+            SocialSend/sendd
 
 2. Verify that the container is running and dashd node is downloading the blockchain
 
